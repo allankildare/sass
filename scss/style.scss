@@ -1,0 +1,83 @@
+$font: 'Montserrat', sans-serif;
+$bg-color: #faa3ff;
+$header-color: #292929;
+$header-text-color: #fafafa;
+$principal-bg-color: #d6d6d6;
+
+* {
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+}
+
+/* nesting */
+header {
+    background-color: $header-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    
+    img {
+        width: 60px;
+    }
+    nav {
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                color: $header-text-color;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.principal {
+    min-height: 550px;
+    height: 90vh;
+    background-color: $principal-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .info {
+        background-color: #4a4a4a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 40px;
+        border-radius: 10px;
+        img {
+            width: 20vw;
+        }
+
+        .buttons {
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-top:15px;
+            
+            button {
+                padding: 10px 15px;
+                border-radius: 7px;
+                border: 2px solid #CF649A;
+                background-color: transparent;
+                &:hover {
+                    transition: .7s;
+                    background-color: #CF649A;
+                    color: #0d0d0d;
+                }
+            }
+            
+            a, a:visited{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 500;
+                color: #CF649A;
+                
+                &:hover {
+                    color: #0d0d0d;
+                }
+            }
+        }
+    }
+}
