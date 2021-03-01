@@ -1,7 +1,10 @@
 $font: 'Montserrat', sans-serif;
-$bg-color: #faa3ff;
-$header-color: #292929;
-$header-text-color: #fafafa;
+$bg-color: #292929;
+$black: rgb(17, 17, 17);
+$gray: rgb(27, 27, 27);;
+$pink: hsl(330, 53%, 60%);
+// $pink: hsl(330, 71%, 77%);
+$white: #fafafa;
 $principal-bg-color: #d6d6d6;
 
 * {
@@ -12,36 +15,57 @@ $principal-bg-color: #d6d6d6;
 
 /* nesting */
 header {
-    background-color: $header-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 15px;
+    background-color: $bg-color;
+    padding: 8px 50px;
+    min-height: calc(10vh - 16px); // altura minima tirando o padding-top e padding-bottom
     
-    img {
-        width: 60px;
-    }
-    nav {
-        ul {
-            list-style: none;
-            li {
-                display: inline-block;
-                color: $header-text-color;
-                margin-right: 15px;
+    .menu {
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 60px;
+        }
+
+        nav {
+            ul {
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                    margin-right: 15px;
+    
+                    a, a:visited {
+                        text-decoration: none;
+                        color: $gray;
+                        padding: 5px 20px;
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        border-radius: 16px;
+                        border: none;
+                        transition: .6s ease;
+                        background-color: $pink;
+                        &:hover {
+                            background: linear-gradient(128deg, rgba(97,92,240,0.8323704481792717) 0%, rgba(207,99,153,1) 100%);
+                        }
+                    }
+                }
             }
         }
     }
+    
 }
 
 .principal {
     min-height: 550px;
     height: 90vh;
-    background-color: $principal-bg-color;
+    background-color: $bg-color;
     display: flex;
     justify-content: center;
     align-items: center;
     .info {
-        background-color: #4a4a4a;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -54,19 +78,19 @@ header {
         .buttons {
             flex-direction: row;
             justify-content: space-evenly;
-            padding-top:20px;
+            padding-top: 40px;
             
             a, a:visited{
                 text-decoration: none;
-                font-size: 16px;
-                font-weight: 500;
+                font-size: 1rem;
+                font-weight: 600;
                 color: #CF649A;
                 padding: 10px 15px;
                 border: 2px solid #CF649A;
-                border-radius: 7px;
+                border-radius: 22px;
+                transition: .7s ease;
                 
                 &:hover {
-                    transition: .7s;
                     background-color: #CF649A;
                     color: #0d0d0d;
                 }
