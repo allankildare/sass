@@ -79,4 +79,41 @@ header .menu nav ul li a:hover, header .menu nav ul li a:visited:hover {
   color: #0d0d0d;
 }
 
+section {
+  padding: 60px 90px;
+}
+section h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 25px;
+}
+section p {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.what-is-sass {
+  background-color: #e7e6e6;
+}
+
+.why-sass {
+  background-color: #e1e1e1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 15px 0;
+  background-color: #292929;
+  color: #fafafa;
+}
+footer i {
+  color: #e90000;
+}
+footer a, footer a:visited {
+  color: #fafafa;
+}
+
 /*# sourceMappingURL=main.css.map */
