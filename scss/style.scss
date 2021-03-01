@@ -3,9 +3,15 @@ $bg-color: #292929;
 $black: rgb(17, 17, 17);
 $gray: rgb(27, 27, 27);;
 $pink: hsl(330, 53%, 60%);
-// $pink: hsl(330, 71%, 77%);
+$light-gray: #e7e6e6;
 $white: #fafafa;
 $principal-bg-color: #d6d6d6;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 * {
     font-family: $font;
@@ -62,9 +68,8 @@ header {
     min-height: 550px;
     height: 90vh;
     background-color: $bg-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
+    
     .info {
         display: flex;
         flex-direction: column;
@@ -96,5 +101,40 @@ header {
                 }
             }
         }
+    }
+}
+
+section {
+    padding: 60px 90px;
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 25px;
+    }
+    p {
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+    }
+}
+
+.what-is-sass {
+    background-color: $light-gray;
+}
+
+.why-sass {
+    background-color: rgb(225, 225, 225);
+}
+
+footer {
+    @include flexCenter();
+    font-size: 1rem;
+    padding: 15px 0;
+    background-color: $bg-color;
+    color: $white;
+    i {
+        color: rgb(233, 0, 0);
+    }
+    a, a:visited {
+        color: $white;
     }
 }
